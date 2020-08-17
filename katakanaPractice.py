@@ -26,7 +26,7 @@ for kata in kataList:
 		print("Incorrect :(\n")
 	
 
-##### Features that need to be added
+##### Features to be added #####
 
 '''
 
