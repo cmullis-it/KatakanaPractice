@@ -1,10 +1,31 @@
 # GUI Practice for the application
 
-import tkinter as tk
+from tkinter import *
 
-window = tk.Tk()
 
-greeting = tk.Label(text='Hello, Tkinter')
-greeting.pack()
+master = Tk()
 
-window.mainloop()
+textLine = "Hello World!"
+
+
+helloWorldLabel = Label(
+	text=textLine
+	)
+helloWorldLabel.pack()
+
+def newLabel():
+	newLabel = Label(
+		text="This is a new label")
+	label.pack()
+
+button1 = Button(
+	text="Press me",
+	command=newLabel)
+button1.pack()
+
+
+master.mainloop()
+
+
+
+ 

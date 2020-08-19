@@ -13,17 +13,18 @@ random.shuffle(kataList)
 
 # Prints the kana, then asks the user for input, checks against value in 
 # dictionary to see if correct
-for kata in kataList:
-	print(kata)
-	answer = input('How do you pronounce this kana?\n')
-	stripped_answer = answer.strip()
-	if stripped_answer.lower() == "exit":
-		break
-	elif stripped_answer.lower() == kataDict[kata]:
-		print("Right!\n")
+def checkAnswer():
+	for kata in kataList:
+		print(kata)
+		answer = input('How do you pronounce this kana?\n')
+		stripped_answer = answer.strip()
+		if stripped_answer.lower() == "exit":
+			break
+		elif stripped_answer.lower() == kataDict[kata]:
+			print("Right!\n")
 
-	else:
-		print("Incorrect :(\n")
+		else:
+			print("Incorrect :(\n")
 	
 
 ##### Features to be added #####
