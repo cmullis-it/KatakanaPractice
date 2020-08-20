@@ -2,26 +2,42 @@
 
 from tkinter import *
 
-
 master = Tk()
+master.title("Katakana Practice")
 
-textLine = "Hello World!"
+prompt = "マ"
+
+answer = "ma"
+
+rightAns = "Correct!"
+wrongAns = "Sorry, that was wrong"
+
+def checkAnswer():
+		feedBack_lbl.config(text=rightAns)
 
 
-helloWorldLabel = Label(
-	text=textLine
+label = Label(
+	text=prompt
 	)
-helloWorldLabel.pack()
+label.pack()
 
-def newLabel():
-	newLabel = Label(
-		text="This is a new label")
-	label.pack()
+button = Button(
+	text='Check Answer',
+	command=checkAnswer,
+)
+button.pack()
 
-button1 = Button(
-	text="Press me",
-	command=newLabel)
-button1.pack()
+entry = Entry()
+entry.pack()
+
+userInput = entry.get()
+
+feedBack_lbl = Label(
+	text=''
+)
+feedBack_lbl.pack()
+
+
 
 
 master.mainloop()
