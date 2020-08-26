@@ -29,7 +29,6 @@ lbl_KanaPrompt.pack()
 
 lbl_KanaAnswer = Label(
 	text=answer,
-	visible=FALSE
 )
 
 # Constant prompt explaining instructions from App
