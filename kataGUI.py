@@ -3,10 +3,16 @@
 import tkinter as tk
 import kataPairs
 
+#messing with Fonts
+import tkinter.font as font
+
 # Create the master window, and name "Kat.Pract."
 master = tk.Tk()
 master.title("Katakana Practice")
 
+######
+# Messing with Font Size
+myFont = font.Font(size=30)
 
 # Placeholders for the prompt/ correct answer that user 
 # input is being compared against. 
@@ -25,6 +31,7 @@ lbl_KanaPrompt = tk.Label(
 	text=promptKana,
 	height=2,
 )
+lbl_KanaPrompt['font'] = myFont
 lbl_KanaPrompt.pack()
 
 
@@ -54,6 +61,7 @@ def checkAnswer():
 # Creates button used to check answer
 button = tk.Button(
 	text='Check Answer',
+	command=checkAnswer
 )
 button.pack()
 
