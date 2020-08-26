@@ -1,10 +1,10 @@
 # GUI Practice for the application
 
-from tkinter import *
+import tkinter as tk
 import kataPairs
 
 # Create the master window, and name "Kat.Pract."
-master = Tk()
+master = tk.Tk()
 master.title("Katakana Practice")
 
 
@@ -21,51 +21,46 @@ wrongAns = "Sorry, that was wrong"
 
 
 # The Kana Label that will shift through the various Kana
-lbl_KanaPrompt = Label(
+lbl_KanaPrompt = tk.Label(
 	text=promptKana,
 	height=2,
 )
 lbl_KanaPrompt.pack()
 
-lbl_KanaAnswer = Label(
-	text=answer,
-)
 
 # Constant prompt explaining instructions from App
-lbl_QuestionPrompt = Label(
+lbl_QuestionPrompt = tk.Label(
 	text=promptQuestion
 )
 lbl_QuestionPrompt.pack()
 
 # Entry box grabbing the input from the user. 
-inputFromUser = Entry(master)
+inputFromUser = tk.Entry(master)
 inputFromUser.pack()
 
 ################################################
 
-'''
+
 def checkAnswer():
-	userInput = entry.get()
+	userInput = inputFromUser.get()
 	if userInput == answer:
-		feedBack_lbl.config(text=rightAns)
+		lbl_FeedBack.config(text=rightAns)
 	else:
-		feedBack_lbl.config(text=wrongAns)
-'''
+		lbl_FeedBack.config(text=wrongAns)
+
 
 ################################################
 
 # Creates button used to check answer
-button = Button(
+button = tk.Button(
 	text='Check Answer',
 )
 button.pack()
 
 # Creates label used to provide Right/Wrong Feedback
-lbl_FeedBack = Label(
+lbl_FeedBack = tk.Label(
 )
 lbl_FeedBack.pack()
-
-
 
 
 master.mainloop()
